@@ -17,3 +17,5 @@ jobs:
         with:
           # see: https://docs.unity3d.com/ScriptReference/BuildTarget.html
           targetPlatform: StandaloneWindows64
+
+      - run: ls -R
