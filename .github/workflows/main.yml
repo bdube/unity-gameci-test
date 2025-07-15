@@ -7,9 +7,9 @@ jobs:
     build:
       runs-on: windows-latest
       steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
-      - uses: game-ci/unity-builder@v4
+      - uses: game-ci/unity-builder@3b26780ddfe24a0ee2aebb0a65297ab69fc5bb4c # v4.5.0
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -17,5 +17,6 @@ jobs:
         with:
           # see: https://docs.unity3d.com/ScriptReference/BuildTarget.html
           targetPlatform: StandaloneWindows64
+          projectPath: MyProject
 
       - run: ls -R
